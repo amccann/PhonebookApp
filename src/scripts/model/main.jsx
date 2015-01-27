@@ -1,4 +1,4 @@
-var PhoneBookApp = require('../react_apps/phonebook/PhonebookApp');
+var PhoneBookApp = require('../react_apps/phonebook/PhonebookApp.jsx');
 var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;

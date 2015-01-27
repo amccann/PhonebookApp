@@ -19,7 +19,7 @@ module.exports = {
   devtool: false,
   entry: [
       'webpack/hot/only-dev-server',
-      './src/scripts/model/main.js'
+      './src/scripts/model/main.jsx'
   ],
 
   stats: {
@@ -36,19 +36,24 @@ module.exports = {
       exclude: 'node_modules',
       loader: 'jshint'
     }],
-    loaders: [{
-      test: /\.js$/,
-      loader: 'react-hot!jsx-loader?harmony'
-    }, {
-      test: /\.sass/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader'
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192'
-    }]
+    loaders: [
+        // **IMPORTANT** This is needed so that each bootstrap js file required by
+        // bootstrap-webpack has access to the jQuery object
+        { test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
+
+        // Needed for the css-loader when [bootstrap-webpack](https://github.com/bline/bootstrap-webpack)
+        // loads bootstrap's css.
+        { test: /\.woff(\d?|(\?v=\d+\.\d+\.\d+)?)$/,    loader: "url?limit=10000&minetype=application/font-woff" },
+        { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,           loader: "url?limit=10000&minetype=application/octet-stream" },
+        { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,           loader: "file" },
+        { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,           loader: "url?limit=10000&minetype=image/svg+xml" },
+
+
+        { test: /\.jsx$/, loader: 'react-hot!jsx-loader?harmony' },
+        { test: /\.sass/, loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded' },
+        { test: /\.css$/, loader: 'style-loader!css-loader' },
+        { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+    ]
   },
 
   plugins: [

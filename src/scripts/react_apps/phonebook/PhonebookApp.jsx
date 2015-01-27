@@ -1,8 +1,9 @@
 'use strict';
 
 var React = require('react/addons');
-var PhoneBook = require('../../react_components/phonebook/Phonebook');
+var PhoneBook = require('../../react_components/phonebook/Phonebook.jsx');
 var PhonebookData = require('../../model/PhonebookData');
+
 
 var PhoneBookApp = React.createClass({
     render: function() {

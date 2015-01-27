@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
-var FilterMixin = require('../mixins/FilterMixin');
+var FilterMixin = require('../mixins/FilterMixin.jsx');
 
 var PhoneBookEntry = React.createClass({
     mixins: [ FilterMixin ],

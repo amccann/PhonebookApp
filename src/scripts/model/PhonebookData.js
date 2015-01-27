@@ -1,6 +1,6 @@
 'use strict';
 
-//Mocked framework for communicating with rest api.
+//Mocked framework for communicating with "server".
 var PhonebookData = {
     data: [
         {firstname: "Jenny",    lastname: "??",         number: "17078675309"},

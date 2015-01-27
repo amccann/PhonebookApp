@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react/addons');
-var SearchBar = require('../Searchbar');
-var PhoneBookEntryList = require('./PhonebookEntryList');
+var SearchBar = require('../Searchbar.jsx');
+var PhoneBookEntryList = require('./PhonebookEntryList.jsx');
 
 var PhoneBook = React.createClass({
     // ----- API functions ----- //

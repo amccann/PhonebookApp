@@ -1,9 +1,9 @@
 'use strict';
 
 var React = require('react/addons');
-var PhoneBookEntry = require('./PhonebookEntry');
-var PhoneBookPropTypes = require('./misc/PhonebookProptypes');
-var PhoneBookAppender = require('./PhonebookAppender');
+var PhoneBookEntry = require('./PhonebookEntry.jsx');
+var PhoneBookPropTypes = require('./misc/PhonebookProptypes.jsx');
+var PhoneBookAppender = require('./PhonebookAppender.jsx');
 
 var PhoneBookEntryList = React.createClass({
     statics: {
