@@ -44,7 +44,7 @@ var PhoneBookAppender = React.createClass({
                 <td><input value={this.state.firstname} type="text" placeholder="First Name" ref="firstNameInput" onChange={this.handleInputChange.bind(this, "firstname")}/></td>
                 <td><input value={this.state.lastname} type="text" placeholder="Last Name" ref="lastNameInput" onChange={this.handleInputChange.bind(this, "lastname")}/></td>
                 <td><input value={this.state.number} type="text" placeholder="Number" ref="numberInput" onChange={this.handleInputChange.bind(this, "number")}/></td>
-                <td><i className="fa fa-plus" onClick={this.handleSaveButton}/></td>
+                <td><i className="glyphicon glyphicon-plus" onClick={this.handleSaveButton}/></td>
             </tr>
         );
     }

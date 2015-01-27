@@ -28,7 +28,7 @@ var PhoneBookEntry = React.createClass({
                 <td>{this.props.firstname}</td>
                 <td>{this.props.lastname}</td>
                 <td>{this.phoneNumberFilter(this.props.number)}</td>
-                <td><i className="fa fa-times" onClick={this.handleRemoveButton}/></td>
+                <td><i className="glyphicon glyphicon-remove" onClick={this.handleRemoveButton}/></td>
             </tr>
             );
     }
