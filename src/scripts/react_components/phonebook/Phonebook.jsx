@@ -23,12 +23,10 @@ var PhoneBook = React.createClass({
     handleOnDataChanged: function(event) {
         var entry = event.entry;
         if(event.type === PhoneBookEntryList.Event.Remove) {
-            this.props.dataSource.removeEntry(entry)
+            this.props.dataSource.removeEntry(entry, this.getDataFromSource)
         } else if (event.type === PhoneBookEntryList.Event.Add) {
-            this.props.dataSource.addEntry(entry);
+            this.props.dataSource.addEntry(entry, this.getDataFromSource);
         }
-
-        this.getDataFromSource();
     },
 
     // ----- Helpers ----- //
