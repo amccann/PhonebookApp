@@ -14,6 +14,6 @@ var PhonebookData = {
     getData: function(callback) {
         jquery.get(restEndpoint, callback)
     }
-}
+};
 
 module.exports = PhonebookData;
