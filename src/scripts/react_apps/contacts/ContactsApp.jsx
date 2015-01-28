@@ -12,7 +12,7 @@ var ContactsApp = React.createClass({
         return (
             <div className="contacts-area">
                 <Contacts/>
-                <div>Contact page is not implemented yet; get off my <Link to="/app">back</Link>!</div>
+                <div>Contact page is not implemented yet; get off my <Link to="/">back</Link>!</div>
             </div>
         );
     }

@@ -10,7 +10,7 @@ var MainApp = require('../react_apps/MainApp.jsx');
 var content = document.getElementById('content');
 
 var Routes = (
-    <Route name="/app" handler={MainApp}>
+    <Route name="/" handler={MainApp}>
         <Route name="contacts" path="/contacts" handler={ContactsApp}/>
         <DefaultRoute handler={PhoneBookApp}/>
     </Route>

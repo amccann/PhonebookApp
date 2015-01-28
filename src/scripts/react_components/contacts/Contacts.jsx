@@ -9,7 +9,7 @@ var Contacts = React.createClass({
     render : function() {
         return (
             <div>
-                <div><img src={frog}/></div>
+                <div><img height="350px" src={frog}/></div>
             </div>
         );
     }
